@@ -19,16 +19,19 @@ public class AppConfig
     {
         return new MemoryMemberRepository();
     }
+
     @Bean
     public DiscountPolicy discountPolicy()
     {
         return new RateDiscountPolicy();
     }
+
     @Bean
     public MemberService memberService()
     {
         return new MemberServiceImpl(memberRepository());
     }
+
     @Bean
     public OrderService orderService()
     {
